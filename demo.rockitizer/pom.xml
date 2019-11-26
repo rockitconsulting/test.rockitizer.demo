@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>rockit</groupId>
+	<artifactId>demo.rockitizer</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<!--packaging>jar</packaging-->
+	<profiles>
+		<profile>
+			<id>demo</id>
+			<properties>
+				<env>demo</env>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+	</profiles>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+		<filters>
+			<filter>${project.basedir}/src/test/resources/${env}.properties</filter>
+		</filters>
+		<resources>
+			<resource>
+				<filtering>true</filtering>
+				<directory>src/test/resources</directory>
+				<targetPath>${project.basedir}/target/test-classes/</targetPath>
+			</resource>
+		</resources>
+	</build>
+
+	<dependencies>
+<!-- 		 <dependency> -->
+<!-- 			<groupId>com.rockit</groupId> -->
+<!-- 			<artifactId>test.rockitizer</artifactId> -->
+<!-- 			<version>0.0.3-SNAPSHOT</version> -->
+<!-- 			<scope>system</scope> -->
+<!-- 			<systemPath>${basedir}/lib/test.rockitizer-0.0.3-SNAPSHOT-jar-with-dependencies.jar</systemPath> -->
+
+<!-- 		</dependency> -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+		</dependency>
+
+<!-- Non-free libs start  -->
+
+	
+	
+<!-- Non-free libs end  -->
+				 
+		  <dependency>
+			<groupId>com.rockit</groupId>
+			<artifactId>test.rockitizer</artifactId>
+			<version>0.0.7-mq9-SNAPSHOT</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.ibm.mq</groupId>
+					<artifactId>connector</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency> 
+		
+		 
+	</dependencies>
+</project>
