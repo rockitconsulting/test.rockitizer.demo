@@ -41,7 +41,7 @@ environments {
 	    }
 		
 		brokerProjectDirs=[
-			'C:\\rockit\\workspaces\\rockitizer_demo\\'
+			'C:\\rockit\\projects\\github\\test.rockitizer.demo\\'
 			]
 		
         barToExecutionGroup {
