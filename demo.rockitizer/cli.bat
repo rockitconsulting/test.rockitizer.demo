@@ -69,7 +69,7 @@ set CLASSPATH=%M2_REPO%\io\github\rockitconsulting\test.rockitizer\1.0.0-SNAPSHO
 set CLASSPATH=%CLASSPATH%;%M2_REPO%\info\picocli\picocli\4.2.0\picocli-4.2.0.jar
 set CLASSPATH=%CLASSPATH%;%M2_REPO%\log4j\log4j\1.2.17\log4j-1.2.17.jar
 set CLASSPATH=%CLASSPATH%;%M2_REPO%\org\yaml\snakeyaml\1.25\snakeyaml-1.25.jar
-
+set CLASSPATH=%CLASSPATH%;%M2_REPO%\com\google\guava\guava\27.0-jre\guava-27.0-jre.jar
 
 
 
