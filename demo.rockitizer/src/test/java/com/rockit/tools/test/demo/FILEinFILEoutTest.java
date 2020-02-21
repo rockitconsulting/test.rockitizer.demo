@@ -16,7 +16,7 @@ public class FILEinFILEoutTest extends AbstractTestWrapper {
 
 
 	@Test
-	public void testMQInMQOutFlow() throws Exception {
+	public void testFILEinFILEoutFlow() throws Exception {
 		
 		//write messages to inputQueue and wait
 		testBuilder.addStep("a001FILEPutMessage").execute().sleep(10000);
