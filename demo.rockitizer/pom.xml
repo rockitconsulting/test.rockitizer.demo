@@ -28,6 +28,37 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>appassembler-maven-plugin</artifactId>
+				<version>1.10</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>assemble</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+				<assembleDirectory>${project.basedir}</assembleDirectory>
+				<basedir>${project.basedir}</basedir>
+				<binFolder>bin</binFolder>
+				<repositoryLayout>flat</repositoryLayout>
+				<environmentSetupFileName>set-env</environmentSetupFileName>				
+					<programs>
+						<program>
+							<mainClass>io.github.rockitconsulting.test.rockitizer.cli.RockitizerCLI</mainClass>
+							<id>cli</id>
+						</program>
+						<program>
+							<mainClass>org.junit.runner.JUnitCore</mainClass>
+							<id>tester</id>
+						</program>
+					</programs>
+				</configuration>
+			</plugin>
 		</plugins>
 		<!-- <filters> <filter>${project.basedir}/src/test/resources/${env}.properties</filter> 
 			</filters> <resources> <resource> <filtering>true</filtering> <directory>src/test/resources</directory> 
@@ -41,7 +72,7 @@
 			<groupId>io.github.rockitconsulting</groupId>
 			<artifactId>test.rockitizer</artifactId>
 			<version>1.0.0-SNAPSHOT</version>
-<!-- 			<version>0.0.9</version> -->
+			<!-- <version>0.0.9</version> -->
 		</dependency>
 
 	</dependencies>

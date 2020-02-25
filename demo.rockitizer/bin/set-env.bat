@@ -1,0 +1,1 @@
+set CLASSPATH_PREFIX=../target/test-classes
