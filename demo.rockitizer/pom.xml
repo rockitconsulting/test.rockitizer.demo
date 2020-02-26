@@ -52,10 +52,6 @@
 							<mainClass>io.github.rockitconsulting.test.rockitizer.cli.RockitizerCLI</mainClass>
 							<id>cli</id>
 						</program>
-						<program>
-							<mainClass>org.junit.runner.JUnitCore</mainClass>
-							<id>tester</id>
-						</program>
 					</programs>
 				</configuration>
 			</plugin>
