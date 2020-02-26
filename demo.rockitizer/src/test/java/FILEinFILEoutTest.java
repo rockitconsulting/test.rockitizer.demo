@@ -8,9 +8,9 @@ import com.rockit.common.blackboxtester.assertions.XMLFileAssertion;
 import com.rockit.common.blackboxtester.suite.structures.TestBuilder;
 import com.rockit.common.blackboxtester.wrapper.AbstractTestWrapper;
 
-public class FILEinFILEoutTest extends AbstractTestWrapper {
-	public static Logger logger = Logger.getLogger(FILEinFILEoutTest.class.getName());
-	public TestBuilder testBuilder = newTestBuilderFor(FILEinFILEoutTest.class);
+public class FILEinFILEOutTest extends AbstractTestWrapper {
+	public static Logger logger = Logger.getLogger(FILEinFILEOutTest.class.getName());
+	public TestBuilder testBuilder = newTestBuilderFor(FILEinFILEOutTest.class);
 
 	@Test
 	public void testFILEinFILEoutFlow() throws Exception {

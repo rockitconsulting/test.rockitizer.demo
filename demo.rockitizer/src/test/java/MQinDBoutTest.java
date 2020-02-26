@@ -7,9 +7,9 @@ import com.rockit.common.blackboxtester.assertions.XMLFileAssertion;
 import com.rockit.common.blackboxtester.suite.structures.TestBuilder;
 import com.rockit.common.blackboxtester.wrapper.AbstractTestWrapper;
 
-public class MQinDBoutTest extends AbstractTestWrapper {
-	public static Logger logger = Logger.getLogger(MQinDBoutTest.class.getName());
-	public TestBuilder testBuilder = newTestBuilderFor(MQinDBoutTest.class);
+public class MQinDBOutTest extends AbstractTestWrapper {
+	public static Logger logger = Logger.getLogger(MQinDBOutTest.class.getName());
+	public TestBuilder testBuilder = newTestBuilderFor(MQinDBOutTest.class);
 
 	@Test
 	public void testMQInMQOutFlow() throws Exception {
