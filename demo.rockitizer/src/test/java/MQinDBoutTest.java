@@ -19,7 +19,8 @@ public class MQinDBOutTest extends AbstractTestWrapper {
 
 		// read messages from queue after waiting and error
 		testBuilder.addStep("a002DBGetMessage").execute();
-		testBuilder.addStep("a002MQGetError").execute();
+		
+		testBuilder.addStep("a003MQGetError").execute();
 
 		// do assertion with recorded values if mode is reply
 		testBuilder.addAssertion(new XMLFileAssertion("a002DBGetMessage").withNodeMatcher(ElementSelectors.byNameAndText)
