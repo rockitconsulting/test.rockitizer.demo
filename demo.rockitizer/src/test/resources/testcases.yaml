@@ -69,7 +69,7 @@ testCases:
   - connectorRefs:
     - conRefId: MQGET.ERROR
     testStepName: a003MQGetError
-- testCaseName: MQinMQoutTest
+- testCaseName: MQinMQOutTest
   testSteps:
   - connectorRefs:
     - conRefId: MQGET.ERROR
