@@ -42,11 +42,11 @@
 					</execution>
 				</executions>
 				<configuration>
-				<assembleDirectory>${project.basedir}</assembleDirectory>
-				<basedir>${project.basedir}</basedir>
-				<binFolder>bin</binFolder>
-				<repositoryLayout>flat</repositoryLayout>
-				<environmentSetupFileName>set-env</environmentSetupFileName>				
+					<assembleDirectory>${project.basedir}</assembleDirectory>
+					<basedir>${project.basedir}</basedir>
+					<binFolder>bin</binFolder>
+					<repositoryLayout>flat</repositoryLayout>
+					<environmentSetupFileName>set-env</environmentSetupFileName>
 					<programs>
 						<program>
 							<mainClass>io.github.rockitconsulting.test.rockitizer.cli.RockitizerCLI</mainClass>
@@ -63,13 +63,10 @@
 	</build>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>io.github.rockitconsulting</groupId>
 			<artifactId>test.rockitizer</artifactId>
-			<version>1.0.0</version>
-			<!-- <version>0.0.9</version> -->
+			<version>1.0.4</version>
 		</dependency>
-
 	</dependencies>
 </project>
