@@ -28,7 +28,16 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
-
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>repo</directory>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>appassembler-maven-plugin</artifactId>
@@ -66,7 +75,7 @@
 		<dependency>
 			<groupId>io.github.rockitconsulting</groupId>
 			<artifactId>test.rockitizer</artifactId>
-			<version>1.0.4-SNAPSHOT</version>
+			<version>1.0.4.2</version>
 		</dependency>
 	</dependencies>
 </project>
