@@ -12,7 +12,7 @@ Demo Test.Rockitizer project **demo.rockitizer**
 
 # RockitizerDemo 
 ***Integration application with various connectors. Written for IBM Integration Bus/AppConnect***
-## Configuration
+### Configuration
 *conf/demo.broker* - integration node configuration.
 
 *conf/MQMON.CFG* - MO72 MQ client configuration.
@@ -23,7 +23,7 @@ Demo Test.Rockitizer project **demo.rockitizer**
 # demo.rockitizer 
 ***Off-the-shelf test suite. Optimized for testing the RocktizerDemo*** 
 
-## Configuration
+### Configuration
 *conf/settings.xml* - Maven configuration.
 
 **FILEInFILEOutTEST** - testing *File2File.msgflow* via FILEPUT/FILEGET and FILEDEL connectors;
