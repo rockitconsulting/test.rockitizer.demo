@@ -29,6 +29,8 @@ Demo Test.Rockitizer project **demo.rockitizer**
 
 **MQ2DB.msgflow** - optimized for *MQInDBOutTEST*
 
+**MQ2MQ.msgflow** - optimized for *MQInMQOutTEST*
+
 
 # demo.rockitizer 
 ***Off-the-shelf test suite. Optimized for testing the RocktizerDemo integration project.*** 
