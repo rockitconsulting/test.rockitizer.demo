@@ -17,6 +17,8 @@ Demo Test.Rockitizer project **demo.rockitizer**
 # demo.rockitizer 
 ***Off-the-shelf test suite. Optimized for testing the RocktizerDemo*** 
 
+**FILEInFILEOutTEST** - testing via FILEPUT, FILEGET and FILEDEL connectors
+
 ## Authors
 
 `test.rockitizer` was created by [`Yefym Dmukh`](https://github.com/yefymdmukh).
