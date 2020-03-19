@@ -29,7 +29,7 @@ Demo Test.Rockitizer project **demo.rockitizer**
 
 ### Test Suite 
 
-**src/test/resources**
+Location: **src/test/resources**
 
 **FILEInFILEOutTEST** - testing *File2File.msgflow* via FILEPUT/FILEGET and FILEDEL connectors;
 
