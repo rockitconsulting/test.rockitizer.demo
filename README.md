@@ -27,6 +27,8 @@ Demo Test.Rockitizer project **demo.rockitizer**
 
 **MQInMQOutTEST** - via MQPUT/MQGET;
 
+**WSWithDatabaseTEST** - teting via DBPUT/DBGET, HTTP and MQGET connectors.
+
 ## Authors
 
 `test.rockitizer` was created by [`Yefym Dmukh`](https://github.com/yefymdmukh).
