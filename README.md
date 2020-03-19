@@ -13,7 +13,8 @@ Demo Test.Rockitizer project **demo.rockitizer**
 ***Integration application with various connectors. Written for IBM Integration Bus/AppConnect***
 
 
-# demo.rockitizer - test suite 
+# demo.rockitizer 
+***Off-the-shelf test suite*** 
 
 ## Authors
 
