@@ -7,7 +7,7 @@ Demo Test.Rockitizer project **demo.rockitizer**
 
 # Mission
 
-**demo.rockitizer** disposes of multiple ready test plans that can be applied for testing of **RockitizerDemo** 
+**demo.rockitizer** was designed as a reference test suite, to demonstrate interaction of the test framework with real-life integration projects. It disposes of multiple ready test plans for testing **RockitizerDemo** 
 
 # RockitizerDemo 
 ***Integration application with various connectors. Written for IBM Integration Bus/AppConnect***
