@@ -19,6 +19,15 @@ Demo Test.Rockitizer project **demo.rockitizer**
 
 *conf/bars* - properties for *mqsiapplyoverridebar* command.
 
+### Applications
+
+**File2File.msgflow** - integration application optimized for *FILEInFILEOutTEST*
+
+**File2MQ.msgflow** - optimized for *FILEInMQOutTEST*
+
+**JSON2DB.msgflow** - optimized for *JSONwithDatabaseTEST*
+
+**MQ2DB.msgflow** - optimized for *MQInDBOutTEST*
 
 
 # demo.rockitizer 
