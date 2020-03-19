@@ -12,6 +12,7 @@ Demo Test.Rockitizer project **demo.rockitizer**
 
 # RockitizerDemo 
 ***Integration application with various connectors. Written for IBM Integration Bus/AppConnect***
+
 *conf/demo.broker* - integration node details
 
 *MQMON.CFG* - 
