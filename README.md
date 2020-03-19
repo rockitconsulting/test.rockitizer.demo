@@ -1,9 +1,10 @@
 [![N|Solid](http://www.rockit.consulting/images/logo-fixed.png)](http://www.rockit.consulting)
 
 # Structure
+Demo IIB project **RockitizerDemo** 
+
 Demo Test.Rockitizer project **demo.rockitizer**
 
-Demo IIB project **RockitizerDemo** 
 
 **demo.rockitizer** disposes of multiple ready test plans that should be applied for testing of **RockitizerDemo** 
 
