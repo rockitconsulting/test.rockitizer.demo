@@ -19,7 +19,7 @@ Demo Test.Rockitizer project **demo.rockitizer**
 
 **FILEInFILEOutTEST** - testing *File2File.msgflow* via FILEPUT/FILEGET and FILEDEL connectors;
 
-**FILEInMQOutTEST** - via FILEPUT and MQGET;
+**FILEInMQOutTEST** - testing *File2MQ.msgflow* via FILEPUT and MQGET;
 
 **JSONwithDatabaseTEST** - via DBPUT/DBGET, MQGET and HTTP;
 
