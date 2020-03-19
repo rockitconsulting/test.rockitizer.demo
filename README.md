@@ -22,7 +22,7 @@ Demo Test.Rockitizer project **demo.rockitizer**
 
 
 # demo.rockitizer 
-***Off-the-shelf test suite. Optimized for testing the RocktizerDemo*** 
+***Off-the-shelf test suite. Optimized for testing the RocktizerDemo integration project.*** 
 
 ### Configuration
 *conf/settings.xml* - Maven configuration.
