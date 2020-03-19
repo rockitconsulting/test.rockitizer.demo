@@ -18,6 +18,7 @@ Demo Test.Rockitizer project **demo.rockitizer**
 ***Off-the-shelf test suite. Optimized for testing the RocktizerDemo*** 
 
 **FILEInFILEOutTEST** - testing via FILEPUT, FILEGET and FILEDEL connectors;
+
 **FILEInMQOutTEST** - testing via FILEPUT and MQGET connectors;
 
 ## Authors
