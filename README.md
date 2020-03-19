@@ -28,6 +28,7 @@ Demo Test.Rockitizer project **demo.rockitizer**
 *conf/settings.xml* - Maven configuration.
 
 ### Test Suite
+(under src/test/java)
 **FILEInFILEOutTEST** - testing *File2File.msgflow* via FILEPUT/FILEGET and FILEDEL connectors;
 
 **FILEInMQOutTEST** - testing *File2MQ.msgflow* via FILEPUT and MQGET;
