@@ -7,7 +7,7 @@ Demo Test.Rockitizer project **demo.rockitizer**
 
 # Mission
 
-**demo.rockitizer** was designed as a reference test suite, to demonstrate interaction of the test framework with a real-life integration project. **demo.rockitizer** disposes of ready test plans designed for testing the **RockitizerDemo** 
+**demo.rockitizer** was designed as a reference test suite, to demonstrate interaction of the test framework with a real-life integration project. **demo.rockitizer** disposes of ready test plans designed to demonstrate testing techniques in combination with the **RockitizerDemo** 
 
 # RockitizerDemo 
 ***Integration application with various connectors. Written for IBM Integration Bus/AppConnect***
