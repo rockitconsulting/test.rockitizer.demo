@@ -17,13 +17,15 @@ Demo Test.Rockitizer project **demo.rockitizer**
 # demo.rockitizer 
 ***Off-the-shelf test suite. Optimized for testing the RocktizerDemo*** 
 
-**FILEInFILEOutTEST** - testing via FILEPUT, FILEGET and FILEDEL connectors;
+**FILEInFILEOutTEST** - testing via FILEPUT/FILEGET and FILEDEL connectors;
 
-**FILEInMQOutTEST** - testing via FILEPUT and MQGET connectors;
+**FILEInMQOutTEST** - via FILEPUT and MQGET;
 
-**JSONwithDatabaseTEST** - testing via DBPUT, MQGET, HTTP and DBGET connectors;
+**JSONwithDatabaseTEST** - via DBPUT/DBGET, MQGET and HTTP;
 
-**MQInDBOutTEST** - testing via DBPUT, MQGET, MQPUT and DBGET connectors;
+**MQInDBOutTEST** - via DBPUT/DBGET and MQPUT/MQGET;
+
+**MQInMQOutTEST** - via MQPUT/MQGET;
 
 ## Authors
 
