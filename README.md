@@ -23,6 +23,8 @@ Demo Test.Rockitizer project **demo.rockitizer**
 
 **JSONwithDatabaseTEST** - testing via DBPUT, MQGET, HTTP and DBGET connectors;
 
+**MQInDBOutTEST** - testing via DBPUT, MQGET, MQPUT and DBGET connectors;
+
 ## Authors
 
 `test.rockitizer` was created by [`Yefym Dmukh`](https://github.com/yefymdmukh).
