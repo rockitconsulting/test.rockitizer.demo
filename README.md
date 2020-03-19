@@ -17,6 +17,7 @@ Demo Test.Rockitizer project **demo.rockitizer**
 
 *conf/MQMON.CFG* - MO72 MQ client configuration.
 
+*conf/bars* - properties for *mqsiapplyoverridebar* command
 
 
 
