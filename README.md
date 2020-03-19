@@ -27,7 +27,7 @@ Demo Test.Rockitizer project **demo.rockitizer**
 
 **MQInMQOutTEST** - testing *MQ2MQ.msgflow* via MQPUT/MQGET;
 
-**WSWithDatabaseTEST** - teting via DBPUT/DBGET, HTTP and MQGET connectors.
+**WSWithDatabaseTEST** - testing *WSwithDatabase.msgflow* via DBPUT/DBGET, HTTP and MQGET connectors.
 
 ## Authors
 
