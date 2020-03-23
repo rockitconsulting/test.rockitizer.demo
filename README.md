@@ -36,11 +36,12 @@ Demo Test.Rockitizer project **demo.rockitizer**
 ***Off-the-shelf test suite. Optimized for testing the RocktizerDemo integration project.*** 
 
 ### Configuration
-*conf/settings.xml* - Maven configuration.
+*/conf/settings.xml* - Maven configuration.
+*/repo* - Local Maven repo.
 
 ### Test Suite 
 
-Location: **src/test/resources**
+Location: **/src/test/resources**
 
 **FILEInFILEOutTEST** - testing *File2File.msgflow* via FILEPUT/FILEGET and FILEDEL connectors;
 
@@ -53,6 +54,7 @@ Location: **src/test/resources**
 **MQInMQOutTEST** - testing *MQ2MQ.msgflow* via MQPUT/MQGET;
 
 **WSWithDatabaseTEST** - testing *WSwithDatabase.msgflow* via DBPUT/DBGET, HTTP and MQGET connectors.
+
 
 ## Authors
 
