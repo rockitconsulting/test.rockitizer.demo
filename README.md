@@ -56,6 +56,8 @@ Location: **/src/test/resources**
 
 **WSWithDatabaseTEST** - testing *WSwithDatabase.msgflow* via DBPUT/DBGET, HTTP and MQGET connectors.
 
+### Test Logs
+Location: **/bin/target/logs**
 
 ## Authors
 
