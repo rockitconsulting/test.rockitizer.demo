@@ -37,6 +37,7 @@ Demo Test.Rockitizer project **demo.rockitizer**
 
 ### Configuration
 */conf/settings.xml* - Maven configuration.
+
 */repo* - Local Maven repo.
 
 ### Test Suite 
