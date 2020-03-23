@@ -64,6 +64,24 @@ Location: /src/test/resources/
 ### Test Logs
 Location: /bin/target/logs/test-framework.log
 
+## Getting started
+<span>
+<img align="right" src="https://github.com/rockitconsulting/test.rockitizer/blob/master/docs/img/architecture_with_dependency_small.jpg?raw=true">
+<br>
+For a complete understanding please refer to Documentation: 
+<br>
+<ul>
+<li><a href="https://rockit.atlassian.net/wiki/spaces/TR/pages/926842891/Introduction" target="_blank">Introduction</a></li>
+<li><a href="https://rockit.atlassian.net/wiki/spaces/TR/pages/941228053/Quick+Start" target="_blank">Quick Start Guide</a></li>
+<li><a href="https://rockit.atlassian.net/wiki/spaces/TR/pages/947716159/Project+layout" target="_blank">Project Layout/Testplan</a></li>
+<li><a href="https://rockit.atlassian.net/wiki/spaces/TR/pages/947191889/Configuration" target="_blank">Confiuration</a></li>
+<li><a href="https://rockit.atlassian.net/wiki/spaces/TR/pages/947224777/JUnit+and+Assertions" target="_blank">Execution Plan</a></li>
+<li><a href="https://rockit.atlassian.net/wiki/spaces/TR/pages/947322990/Command-Line" target="_blank">Command Line Interface</a></li>
+<li><a href="https://rockit.atlassian.net/wiki/spaces/TR/pages/929824873/FAQ" target="_blank">FAQ</a></li>
+</ul>
+</span>
+<br><br><br><br>
+
 ## Authors
 
 `test.rockitizer` was created by [`Yefym Dmukh`](https://github.com/yefymdmukh).
