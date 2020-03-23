@@ -13,11 +13,11 @@ Demo Test.Rockitizer project **demo.rockitizer**
 # RockitizerDemo 
 ***Integration application with various connectors. Written for IBM Integration Bus/AppConnect***
 ### Configuration
-*conf/demo.broker* - integration node configuration.
+*/conf/demo.broker* - integration node configuration.
 
-*conf/MQMON.CFG* - MO72 MQ client configuration.
+*/conf/MQMON.CFG* - MO72 MQ client configuration.
 
-*conf/bars* - properties for *mqsiapplyoverridebar* command.
+*/conf/bars* - properties for *mqsiapplyoverridebar* command.
 
 ### Applications
 
@@ -38,11 +38,14 @@ Demo Test.Rockitizer project **demo.rockitizer**
 ### Configuration
 */conf/settings.xml* - Maven configuration.
 
-*/repo* - Local Maven repo.
+*/repo/* - Local Maven repo.
+
+### Utilities
+*/bin/* - Command Line Interface (CLI) Utility
 
 ### Test Suite 
 
-Location: /src/test/resources
+Location: /src/test/resources/
 
 **FILEInFILEOutTEST** - testing *File2File.msgflow* via FILEPUT/FILEGET and FILEDEL connectors;
 
