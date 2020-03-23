@@ -42,7 +42,7 @@ Demo Test.Rockitizer project **demo.rockitizer**
 
 ### Test Suite 
 
-Location: **/src/test/resources**
+Location: /src/test/resources
 
 **FILEInFILEOutTEST** - testing *File2File.msgflow* via FILEPUT/FILEGET and FILEDEL connectors;
 
@@ -57,7 +57,7 @@ Location: **/src/test/resources**
 **WSWithDatabaseTEST** - testing *WSwithDatabase.msgflow* via DBPUT/DBGET, HTTP and MQGET connectors.
 
 ### Test Logs
-Location: **/bin/target/logs**
+Location: /bin/target/logs/test-framework.log
 
 ## Authors
 
