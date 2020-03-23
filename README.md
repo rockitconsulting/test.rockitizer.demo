@@ -40,6 +40,8 @@ Demo Test.Rockitizer project **demo.rockitizer**
 
 */repo/* - Local Maven repo.
 
+*/src/test/resources/log4j.xml* - log4j configuration.
+
 ### Utilities
 */bin/* - Command Line Interface (CLI) Utility
 
