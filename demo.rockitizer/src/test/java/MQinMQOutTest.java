@@ -15,23 +15,50 @@ public class MQinMQOutTest extends AbstractTestWrapper {
 	public void testAddMsgToMQFlow() throws Exception {
 
 		// write messages to inputQueue and wait
-		testBuilder.addStep("a001MQPutMessage").execute().sleep(3000);
+		testBuilder.addStep("a001MQPutMessage").execute().sleep(5000);
 
 		// read messages from queue after waiting and error
 		testBuilder.addStep("a002MQGetError").execute();
 		testBuilder.addStep("a002MQGETMessage").execute();
+		
+		// write messages to inputQueue and wait
+		testBuilder.addStep("a003MQPutMessage").execute().sleep(5000);
+
+		// read messages from queue after waiting and error
+		testBuilder.addStep("a004MQGetError").execute();
+		testBuilder.addStep("a004MQGETMessage").execute();
+				
+		// write messages to inputQueue and wait
+		testBuilder.addStep("a005MQPutMessage").execute().sleep(5000);
+
+		// read messages from queue after waiting and error
+		testBuilder.addStep("a006MQGetError").execute();
+		testBuilder.addStep("a006MQGETMessage").execute();
+
+	
 
 		// do assertion with recorded values if mode is reply
-		testBuilder.addAssertion(new XMLFileAssertion("a002MQGetError").withNodeMatcher(ElementSelectors.byNameAndText)
+		testBuilder.addAssertion(new XMLFileAssertion("a002MQGETMessage").withNodeMatcher(ElementSelectors.byNameAndText)
 		// .ignoreAttrs(ImmutableList.of("updateTimestamp",
 		// "insertTimestamp","processingTime"))
 		// .ignore(ImmutableList.of("updateTimestamp",
 		// "insertTimestamp","beginTimestamp", "endTimestamp",
 		// "addressDate","businessConnectionDate"))
 				.checkForSimilar());
-
+		
+	
 		// do assertion with recorded values if mode is reply
-		testBuilder.addAssertion(new XMLFileAssertion("a002MQGETMessage").withNodeMatcher(ElementSelectors.byNameAndText)
+		testBuilder.addAssertion(new XMLFileAssertion("a004MQGETMessage").withNodeMatcher(ElementSelectors.byNameAndText)
+		// .ignoreAttrs(ImmutableList.of("updateTimestamp",
+		// "insertTimestamp","processingTime"))
+		// .ignore(ImmutableList.of("updateTimestamp",
+		// "insertTimestamp","beginTimestamp", "endTimestamp",
+		// "addressDate","businessConnectionDate"))
+				.checkForSimilar());
+		
+	
+		// do assertion with recorded values if mode is reply
+		testBuilder.addAssertion(new XMLFileAssertion("a006MQGETMessage").withNodeMatcher(ElementSelectors.byNameAndText)
 		// .ignoreAttrs(ImmutableList.of("updateTimestamp",
 		// "insertTimestamp","processingTime"))
 		// .ignore(ImmutableList.of("updateTimestamp",

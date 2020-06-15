@@ -87,6 +87,28 @@ testCases:
   - testStepName: a002MQGetMessage
     connectorRefs:
     - conRefId: MQGET.OUT.MQ2MQ
+  - testStepName: a003MQPutMessage
+    connectorRefs:
+    - conRefId: MQPUT.IN.MQ2RFH2
+      payloads:
+      - fileName: MQPutPayloadWithMQMDHeader.xml
+  - testStepName: a004MQGetError
+    connectorRefs:
+    - conRefId: MQGET.ERROR
+  - testStepName: a004MQGetMessage
+    connectorRefs:
+    - conRefId: MQGET.OUT.MQ2RFH2
+  - testStepName: a005MQPutMessage
+    connectorRefs:
+    - conRefId: MQPUT.IN.MQ2RFH2
+      payloads:
+      - fileName: MQPutPayloadWithRFH2Header.xml
+  - testStepName: a006MQGetError
+    connectorRefs:
+    - conRefId: MQGET.ERROR
+  - testStepName: a006MQGetMessage
+    connectorRefs:
+    - conRefId: MQGET.OUT.MQ2RFH2
 - testCaseName: WSwithDatabaseTest
   testSteps:
   - testStepName: 0BEFORE

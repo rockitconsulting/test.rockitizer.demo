@@ -1,1 +1,1 @@
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:book="http://www.cleverbuilder.com/BookService/"><soapenv:Body><book:AddBookResponse><ID>dac0ca3c-62a9-4558-bee2-7b16307990ab</ID></book:AddBookResponse></soapenv:Body></soapenv:Envelope>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:book="http://www.cleverbuilder.com/BookService/"><soapenv:Body><book:AddBookResponse><ID>e2f7681b-0aa5-4a23-83ef-8d1a4979e1a9</ID></book:AddBookResponse></soapenv:Body></soapenv:Envelope>

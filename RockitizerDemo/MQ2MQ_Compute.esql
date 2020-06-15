@@ -3,10 +3,10 @@
 CREATE COMPUTE MODULE MQ2MQ_Compute
 	CREATE FUNCTION Main() RETURNS BOOLEAN
 	BEGIN
-		CALL CopyMessageHeaders();
-		SET OutputRoot.XMLNSC.Output.Node1 = InputRoot.XMLNSC.Input.Node2;
-		SET OutputRoot.XMLNSC.Output.Node2 = InputRoot.XMLNSC.Input.Node1;
-		-- CALL CopyEntireMessage();
+--		CALL CopyMessageHeaders();
+--		SET OutputRoot.XMLNSC.Output.Node1 = InputRoot.XMLNSC.Input.Node2;
+--		SET OutputRoot.XMLNSC.Output.Node2 = InputRoot.XMLNSC.Input.Node1;
+		 CALL CopyEntireMessage();
 		RETURN TRUE;
 	END;
 
