@@ -5,12 +5,15 @@
   
    
  
-/* Uncomment if you have application */   
+/* Uncomment if you have application 
+   for multibar use: 
+   deployApplicationName='RockitizerDemo SecondAppForMultibar'
+*/   
 deployApplicationName='RockitizerDemo'
   
     
 projectToBar = [
-		['*':['RockitizerDemo']],
+	        ['*':['RockitizerDemo']],
 
 ]
 
@@ -38,10 +41,10 @@ environments {
 	    	 host='localhost'
 	    	 listenerPort='1414'
 	    	 svrconn='SYSTEM.BKR.CONFIG'
-	    }
+      }
 		
-		brokerProjectDirs=[
-			'C:\\Tools\\Jenkins\\workspace\\test.rockitizer.demo\\'
+	 brokerProjectDirs=[
+			'C:\\rockit\\projects\\github\\test.rockitizer.demo\\'
 			]
 		
         barToExecutionGroup {
