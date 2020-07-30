@@ -1,0 +1,12 @@
+#########################################################################################################################
+#
+#  All Constants are copied here. No override, always keep default value
+#
+#########################################################################################################################
+MQ2MQ#MQ Input.queueName = MQ.IN 
+MQ2MQ#MQ Output.queueName = MQ.OUT 
+MQ2MQ#Compute.dataSource = MQ.IN 
+File2File#MQInput.queueName = test
+FileOut#outputDirectory = C:\temp\FILE_OUT 
+FileOut#outputFilename = 
+File2File#outputFilename =
