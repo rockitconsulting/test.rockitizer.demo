@@ -20,7 +20,7 @@ projectToBar = [
 forceFlowExclude = []
     
 
-testProjectDir='C:\\temp\\test\\'    
+testProjectDir='C:\\temp\\test'    
     
 
 broker = 'demo.broker'
@@ -41,12 +41,25 @@ environments {
 	    }
 		
 		brokerProjectDirs=[
-			'C:\\Tools\\Jenkins\\workspace\\test.rockitizer.demo\\'
+			'C:\\rockit\\projects\\github\\test.rockitizer.demo\\'
 			]
 		
         barToExecutionGroup {
           RockitizerDemo.bar=['default']
         }
+    
+  		
+    }
+
+	jenkins { //decoupled qmgr
+		
+		brokerProjectDirs=[
+			'/var/jenkins_home/workspace/RockitizerDemo.github/RockitizerDemo/'
+		]
+		
+   	     barToExecutionGroup {
+  	        RockitizerDemo.bar=['default']
+  	      }
     
   		
     }
