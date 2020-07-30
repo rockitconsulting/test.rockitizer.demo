@@ -54,7 +54,7 @@ environments {
 	jenkins { //decoupled qmgr
 		
 		brokerProjectDirs=[
-			'/var/jenkins_home/workspace/RockitizerDemo.github/RockitizerDemo/'
+			'/var/jenkins_home/workspace/RockitizerDemo.github/'
 		]
 		
    	     barToExecutionGroup {
