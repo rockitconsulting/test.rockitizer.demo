@@ -5,7 +5,8 @@ CREATE COMPUTE MODULE File2File_Compute
 	BEGIN
 		CALL CopyMessageHeaders();
 		SET OutputRoot.XMLNSC.Output.Node1 = InputRoot.XMLNSC.Input.Node2;
-		SET OutputRoot.XMLNSC.Output.Node2 = InputRoot.XMLNSC.Input.Node1;		
+		SET OutputRoot.XMLNSC.Output.Node2 = InputRoot.XMLNSC.Input.Node1;	
+		PROPAGATE TO TERMINAL 'out1' DELETE NONE;
 		RETURN TRUE;
 	END;
 

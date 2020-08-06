@@ -4,7 +4,7 @@
         <correlId></correlId>
         <expiry>-1</expiry>
         <msgFormat>MQSTR</msgFormat>
-        <msgId>AMQ QM1         \��^ ��</msgId>
+        <msgId>AMQ QM1         �_"8�</msgId>
         <msgType>8</msgType>
         <replyToQ></replyToQ>
         <replyToQMgr>QM1</replyToQMgr>
