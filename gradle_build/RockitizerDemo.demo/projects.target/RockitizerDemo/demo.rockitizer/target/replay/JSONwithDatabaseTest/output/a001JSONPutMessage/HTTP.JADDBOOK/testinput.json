@@ -1,1 +1,0 @@
-<response><header><null>HTTP/1.1 200 OK</null><Server>Apache-Coyote/1.1</Server><Content-Length>84</Content-Length><Date>Mon, 25 May 2020 07:22:15 GMT</Date><Content-Type>application/json</Content-Type></header><body><AddBookResponse><ID>fce68a4c-80a4-4a30-957b-2da57249e2c3</ID><status>Success</status></AddBookResponse></body></response>

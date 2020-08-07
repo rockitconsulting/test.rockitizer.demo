@@ -1,3 +1,0 @@
-<ROOT>
-<ROW><BOOK></BOOK><AUTHOR></AUTHOR></ROW>
-</ROOT>
