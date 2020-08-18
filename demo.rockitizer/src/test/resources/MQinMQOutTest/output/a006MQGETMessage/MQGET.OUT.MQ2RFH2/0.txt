@@ -1,0 +1,19 @@
+<mqPayload>
+    <header>
+        <codedCharSetId>1208</codedCharSetId>
+        <correlId></correlId>
+        <expiry>-1</expiry>
+        <msgFormat>MQHRF2</msgFormat>
+        <msgId>AMQ QM1         ?s?^#??</msgId>
+        <msgType>8</msgType>
+        <replyToQ></replyToQ>
+        <replyToQMgr>QM1</replyToQMgr>
+        <rfh2Headers>
+            <rfh2Header><mcd><Msd>xmlnsc</Msd><Set/><Type/><Fmt/></mcd></rfh2Header>
+            <rfh2Header><jms><Dst/><Rto/></jms></rfh2Header>
+            <rfh2Header><usr><netSvc dt="string"/><ReceivedCommunicationId dt="string"><framework><processing/></framework></ReceivedCommunicationId><SystemUserReference dt="string"/><messageType dt="string"/><BusinessSignDN dt="string"/><ProcessType dt="string">0</ProcessType><EntryTimestamp dt="string"/><PartyTechnicalAddress dt="string"/><inboundQueue dt="string"/></usr></rfh2Header>
+            <rfh2Header><de content="properties"><framework><processing><TechnicalServiceIdentification dt="string"/></processing></framework></de></rfh2Header>
+        </rfh2Headers>
+    </header>
+    <body><test>test</test></body>
+</mqPayload>

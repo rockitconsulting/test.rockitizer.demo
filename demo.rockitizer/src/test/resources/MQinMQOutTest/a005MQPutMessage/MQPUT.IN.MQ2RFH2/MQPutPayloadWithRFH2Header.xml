@@ -1,0 +1,57 @@
+<mqPayload>
+	<header>
+		<codedCharSetId>1208</codedCharSetId>
+		<correlId/>
+		<expiry>-1</expiry>
+		<msgFormat>MQHRF2</msgFormat>
+		<msgId>AMQ QM1         ?s?^#??</msgId>
+		<msgType>8</msgType>
+		<replyToQ/>
+		<replyToQMgr>QM1</replyToQMgr>
+		<rfh2Headers>
+			<rfh2Header>
+				<mcd>
+					<Msd>xmlnsc</Msd>
+					<Set></Set>
+					<Type></Type>
+					<Fmt></Fmt>
+				</mcd>
+			</rfh2Header>
+			<rfh2Header>
+				<jms>
+					<Dst></Dst>
+					<Rto></Rto>
+				</jms>
+			</rfh2Header>
+			<rfh2Header>
+				<usr>
+					<netSvc dt="string"></netSvc>
+					<ReceivedCommunicationId dt="string">
+						<framework>
+							<processing></processing>
+						</framework>
+					</ReceivedCommunicationId>
+					<SystemUserReference dt="string"></SystemUserReference>
+					<messageType dt="string"></messageType>
+					<BusinessSignDN dt="string"></BusinessSignDN>
+					<ProcessType dt="string">0</ProcessType>
+					<EntryTimestamp dt="string"></EntryTimestamp>
+					<PartyTechnicalAddress dt="string"></PartyTechnicalAddress>
+					<inboundQueue dt="string"></inboundQueue>
+				</usr>
+			</rfh2Header>
+			<rfh2Header>
+				<de content="properties">
+					<framework>
+						<processing>
+							<TechnicalServiceIdentification dt="string"></TechnicalServiceIdentification>
+						</processing>
+					</framework>
+				</de>
+			</rfh2Header>
+		</rfh2Headers>
+	</header>
+	<body>
+		<test>test</test>
+	</body>
+</mqPayload>

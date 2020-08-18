@@ -21,9 +21,12 @@ projectToBar = [
 
 forceFlowExclude = []
     
+
+    
 mqcfg = 'MQMON.CFG'
 
 environments {
+
 
     demo { 
     	  //iib10+ broker file has no qmgr configuration
@@ -43,6 +46,19 @@ environments {
 	      barToExecutionGroup {
 	          RockitizerDemo.bar=['default']
 	      }
+    }
+
+	jenkins { //packaging only
+		
+		brokerProjectDirs=[
+			'/var/jenkins_home/workspace/RockitizerDemo.github/'
+		]
+		
+   	     barToExecutionGroup {
+  	        RockitizerDemo.bar=['default']
+  	      }
+    
+  		
     }
   
 }

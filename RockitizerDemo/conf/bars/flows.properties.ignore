@@ -10,3 +10,6 @@ File2File#MQInput.queueName = test
 ### multibar test, dummy app
 test#input.queueName = MQ.IN.MQ2MQ 
 test#output.queueName = MQ.OUT.MQ2MQ 
+FileOut#outputDirectory = C:\temp\FILE_OUT 
+FileOut#outputFilename = 
+File2File#outputFilename =
