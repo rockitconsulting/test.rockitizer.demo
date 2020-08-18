@@ -9,49 +9,40 @@
    for multibar use: 
    deployApplicationName='RockitizerDemo SecondAppForMultibar'
 */   
-deployApplicationName='RockitizerDemo'
+deployApplicationName='RockitizerDemo, SecondAppForMultibar'
   
     
 projectToBar = [
 	        ['*':['RockitizerDemo']],
+	        
 
 ]
 
 
-
-
 forceFlowExclude = []
     
-
-testProjectDir='C:\\temp\\test\\'    
-    
-
-broker = 'demo.broker'
 mqcfg = 'MQMON.CFG'
-
-
-
-
 
 environments {
 
-    demo { //decoupled qmgr
-      queueManager {
-	    	 name='QM1' 
-	    	 host='localhost'
-	    	 listenerPort='1414'
-	    	 svrconn='SYSTEM.BKR.CONFIG'
-      }
-		
-	 brokerProjectDirs=[
-			'C:\\rockit\\projects\\github\\test.rockitizer.demo\\'
-			]
-		
-        barToExecutionGroup {
-          RockitizerDemo.bar=['default']
-        }
-    
-  		
+    demo { 
+    	  //iib10+ broker file has no qmgr configuration
+	      queueManager {
+		    	 name='QM1' 
+		    	 host='localhost'
+		    	 listenerPort='1414'
+		    	 svrconn='SYSTEM.BKR.CONFIG'
+	      }
+	      broker = 'demo.broker'
+			
+		  brokerProjectDirs=[
+				'C:\\rockit\\projects\\github\\test.rockitizer.demo\\',
+				'C:\\rockit\\workspaces\\rockitizer_demo'
+		  ]
+			
+	      barToExecutionGroup {
+	          RockitizerDemo.bar=['default']
+	      }
     }
   
 }
