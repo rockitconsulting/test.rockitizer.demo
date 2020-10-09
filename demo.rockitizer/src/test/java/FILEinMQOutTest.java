@@ -25,13 +25,13 @@ public class FILEinMQOutTest extends AbstractTestWrapper {
 		// do assertion with recorded values if mode is reply
 		testBuilder.addAssertion(new XMLFileAssertion("a002MQGetMessage").withNodeMatcher(ElementSelectors.byNameAndText)
 				.ignoreAttrs(ImmutableList.of("updateTimestamp", "insertTimestamp", "processingTime"))
-				.ignore(ImmutableList.of("updateTimestamp", "insertTimestamp", "beginTimestamp", "endTimestamp", "addressDate", "businessConnectionDate"))
+				.ignore(ImmutableList.of("updateTimestamp", "insertTimestamp", "beginTimestamp", "endTimestamp", "addressDate", "businessConnectionDate", "msgId"))
 				.checkForSimilar());
 
 		// do assertion with recorded values if mode is reply
 		testBuilder.addAssertion(new XMLFileAssertion("a002MQGetError").withNodeMatcher(ElementSelectors.byNameAndText)
 				.ignoreAttrs(ImmutableList.of("updateTimestamp", "insertTimestamp", "processingTime"))
-				.ignore(ImmutableList.of("updateTimestamp", "insertTimestamp", "beginTimestamp", "endTimestamp", "addressDate", "businessConnectionDate"))
+				.ignore(ImmutableList.of("updateTimestamp", "insertTimestamp", "beginTimestamp", "endTimestamp", "addressDate", "businessConnectionDate", "msgId"))
 				.checkForSimilar());
 	}
 }
