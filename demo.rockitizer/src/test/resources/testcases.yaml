@@ -69,6 +69,24 @@ testCases:
   - testStepName: a003MQGetError
     connectorRefs:
     - conRefId: MQGET.ERROR
+- testCaseName: MQinFILEOutTest
+  testSteps:
+  - testStepName: 0BEFORE
+    connectorRefs:
+    - conRefId: FILEDEL.OUT.MQ2FILE
+    - conRefId: MQGET.ERROR
+    - conRefId: MQGET.IN.MQ2FILE
+  - testStepName: a001MQPutMessage
+    connectorRefs:
+    - conRefId: MQPUT.IN.MQ2FILE
+      payloads:
+      - fileName: testinput.xml
+  - testStepName: a002FILEGetMessage
+    connectorRefs:
+    - conRefId: FILEGET.OUT.MQ2FILE
+  - testStepName: a003MQGetError
+    connectorRefs:
+    - conRefId: MQGET.ERROR
 - testCaseName: MQinMQOutTest
   testSteps:
   - testStepName: 0BEFORE

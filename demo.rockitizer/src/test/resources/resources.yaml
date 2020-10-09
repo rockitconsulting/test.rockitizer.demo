@@ -38,6 +38,14 @@ mqConnectors:
   type: MQGET
   queue: MQ.OUT.MQ2MQ
   dsRefId: defaultMQ
+- id: MQGET.IN.MQ2FILE
+  type: MQGET
+  queue: MQ.IN.MQ2FILE
+  dsRefId: defaultMQ
+- id: MQPUT.IN.MQ2FILE
+  type: MQPUT
+  queue: MQ.IN.MQ2FILE
+  dsRefId: defaultMQ
 dbConnectors:
 - id: DBPUT.CLEAN
   type: DBPUT
@@ -77,6 +85,12 @@ fileConnectors:
 - id: FILEGET.OUT.FILE2FILE
   type: FILEGET
   path: C:/temp/FILE2FILE_OUT
+- id: FILEGET.OUT.MQ2FILE
+  type: FILEGET
+  path: C:/temp/MQ2FILE_OUT
+- id: FILEDEL.OUT.MQ2FILE
+  type: FILEDEL
+  path: C:/temp/MQ2FILE_OUT
 mqDataSources:
 - id: defaultMQ
   type: MQ
