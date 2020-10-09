@@ -39,7 +39,7 @@ mqConnectors:
   queue: MQ.OUT.MQ2MQ
   dsRefId: defaultMQ
 dbConnectors:
-- id: DBPUT.CLAEN
+- id: DBPUT.CLEAN
   type: DBPUT
   dsRefId: defaultDB
 - id: DBGET.GETBOOKS

@@ -37,7 +37,7 @@ testCases:
   testSteps:
   - testStepName: 0BEFORE
     connectorRefs:
-    - conRefId: DBPUT.CLAEN
+    - conRefId: DBPUT.CLEAN
       payloads:
       - fileName: cleanBookStore.sql
     - conRefId: MQGET.ERROR
@@ -53,7 +53,7 @@ testCases:
   testSteps:
   - testStepName: 0BEFORE
     connectorRefs:
-    - conRefId: DBPUT.CLAEN
+    - conRefId: DBPUT.CLEAN
       payloads:
       - fileName: cleanBookStore.sql
     - conRefId: MQGET.ERROR
@@ -113,7 +113,7 @@ testCases:
   testSteps:
   - testStepName: 0BEFORE
     connectorRefs:
-    - conRefId: DBPUT.CLAEN
+    - conRefId: DBPUT.CLEAN
       payloads:
       - fileName: cleanBookStore.sql
     - conRefId: MQGET.ERROR
