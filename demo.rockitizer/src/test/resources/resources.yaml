@@ -106,3 +106,7 @@ dbDataSources:
   url: jdbc:db2://localhost:50000/ROCKIT
   user: admin
   password: admin
+payloadReplacer:
+  myKey1: content 1
+  myKey2: content 2
+  dBSchemaRockit: ROCKIT

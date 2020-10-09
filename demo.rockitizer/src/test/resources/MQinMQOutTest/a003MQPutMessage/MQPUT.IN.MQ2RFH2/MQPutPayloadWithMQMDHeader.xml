@@ -11,8 +11,8 @@
 	</header>
 	<body>
 		<Input>
-			<Node1>content 1</Node1>
-			<Node2>content 2</Node2>
+			<Node1>${myKey1}</Node1>
+			<Node2>${myKey2}</Node2>
 		</Input>
 	</body>
 </mqPayload>
