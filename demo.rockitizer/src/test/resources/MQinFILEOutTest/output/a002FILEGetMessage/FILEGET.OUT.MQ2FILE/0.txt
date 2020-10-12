@@ -1,1 +1,1 @@
-<Output><Node1 uuid="ca2b9b64-3815-4843-947e-439b284dfe2d">${myKey2}</Node1><Node2>${myKey1}</Node2><Node3>${myKey2}</Node3><Node4>${myKey1}</Node4></Output>
+<Output><Node1 uuid="26d00ca8-4e61-4046-a933-f64637eec943">content 2</Node1><Node2>content 1</Node2><Node3>content 2</Node3><Node4>content 1</Node4></Output>
