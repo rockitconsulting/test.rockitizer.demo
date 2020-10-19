@@ -44,8 +44,9 @@
 				<configuration>
 					<assembleDirectory>${project.basedir}</assembleDirectory>
 					<basedir>${project.basedir}</basedir>
+					<generateRepository>false</generateRepository>
 					<binFolder>bin</binFolder>
-					<repositoryLayout>flat</repositoryLayout>
+					<repositoryLayout>default</repositoryLayout>
 					<environmentSetupFileName>set-env</environmentSetupFileName>
 					<programs>
 						<program>
@@ -57,14 +58,13 @@
 			</plugin>
 		</plugins>
 	</build>
-	<!-- <dependencies> -->
-	<!-- <dependency> -->
-	<!-- <groupId>io.github.rockitconsulting</groupId> -->
-	<!-- <artifactId>test.rockitizer</artifactId> -->
-	<!-- <version>1.0.5.3-SNAPSHOT</version> -->
-	<!-- </dependency> -->
-	<!-- </dependencies> -->
+
 	<dependencies>
+		<dependency>
+			<groupId>io.github.rockitconsulting</groupId>
+			<artifactId>test.rockitizer</artifactId>
+			<version>1.0.5.4</version>
+		</dependency>
 		<dependency>
 			<groupId>com.oracle.ojdbc</groupId>
 			<artifactId>ojdbc8_g</artifactId>
