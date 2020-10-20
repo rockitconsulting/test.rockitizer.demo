@@ -16,13 +16,13 @@ public class FILEinFILEOutTest extends AbstractTestWrapper {
 	public void testFILEinFILEoutFlow() throws Exception {
 
 		// write messages to inputQueue and wait
-		testBuilder.addStep("a001FILEPutMessage").execute().sleep(10000);
+		testBuilder.addStep("010FILEPutMessage").execute().sleep(10000);
 
 		// read messages from queue after waiting and error
-		testBuilder.addStep("a002FILEGetMessage").execute();
+		testBuilder.addStep("020FILEGetMessage").execute();
 
 		// do assertion with recorded values if mode is reply
-		testBuilder.addAssertion(new XMLFileAssertion("a002FILEGetMessage").withNodeMatcher(ElementSelectors.byNameAndText)
+		testBuilder.addAssertion(new XMLFileAssertion("020FILEGetMessage").withNodeMatcher(ElementSelectors.byNameAndText)
 				.ignoreAttrs(ImmutableList.of("updateTimestamp", "insertTimestamp", "processingTime"))
 				.ignore(ImmutableList.of("updateTimestamp", "insertTimestamp", "beginTimestamp", "endTimestamp", "addressDate", "businessConnectionDate"))
 				.checkForSimilar());
