@@ -16,20 +16,20 @@ public class FILEinMQOutTest extends AbstractTestWrapper {
 	public void testMQInMQOutFlow() throws Exception {
 
 		// write messages to inputQueue and wait
-		testBuilder.addStep("a001FILEPutMessage").execute().sleep(10000);
+		testBuilder.addStep("010FILEPutMessage").execute().sleep(10000);
 
 		// read messages from queue after waiting and error
-		testBuilder.addStep("a002MQGetError").execute();
-		testBuilder.addStep("a002MQGetMessage").execute();
+		testBuilder.addStep("020MQGetError").execute();
+		testBuilder.addStep("020MQGetMessage").execute();
 
 		// do assertion with recorded values if mode is reply
-		testBuilder.addAssertion(new XMLFileAssertion("a002MQGetMessage").withNodeMatcher(ElementSelectors.byNameAndText)
+		testBuilder.addAssertion(new XMLFileAssertion("020MQGetMessage").withNodeMatcher(ElementSelectors.byNameAndText)
 				.ignoreAttrs(ImmutableList.of("updateTimestamp", "insertTimestamp", "processingTime"))
 				.ignore(ImmutableList.of("updateTimestamp", "insertTimestamp", "beginTimestamp", "endTimestamp", "addressDate", "businessConnectionDate", "msgId"))
 				.checkForSimilar());
 
 		// do assertion with recorded values if mode is reply
-		testBuilder.addAssertion(new XMLFileAssertion("a002MQGetError").withNodeMatcher(ElementSelectors.byNameAndText)
+		testBuilder.addAssertion(new XMLFileAssertion("020MQGetError").withNodeMatcher(ElementSelectors.byNameAndText)
 				.ignoreAttrs(ImmutableList.of("updateTimestamp", "insertTimestamp", "processingTime"))
 				.ignore(ImmutableList.of("updateTimestamp", "insertTimestamp", "beginTimestamp", "endTimestamp", "addressDate", "businessConnectionDate", "msgId"))
 				.checkForSimilar());

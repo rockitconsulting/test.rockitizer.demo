@@ -15,34 +15,34 @@ public class MQinMQOutTest extends AbstractTestWrapper {
 	public void testAddMsgToMQFlow() throws Exception {
 
 		// write messages to inputQueue and wait
-		testBuilder.addStep("a001MQPutMessage").execute().sleep(5000);
+		testBuilder.addStep("010MQPutMessage").execute().sleep(5000);
 
 		// read messages from queue after waiting and error
-		testBuilder.addStep("a002MQGetError").execute();
-		testBuilder.addStep("a002MQGETMessage").execute();
+		testBuilder.addStep("020MQGetError").execute();
+		testBuilder.addStep("020MQGETMessage").execute();
 
 		// write messages to inputQueue and wait
-		testBuilder.addStep("a003MQPutMessage").execute().sleep(5000);
+		testBuilder.addStep("030MQPutMessage").execute().sleep(5000);
 
 		// read messages from queue after waiting and error
-		testBuilder.addStep("a004MQGetError").execute();
-		testBuilder.addStep("a004MQGETMessage").execute();
+		testBuilder.addStep("040MQGetError").execute();
+		testBuilder.addStep("040MQGETMessage").execute();
 
 		// write messages to inputQueue and wait
-		testBuilder.addStep("a005MQPutMessage").execute().sleep(5000);
+		testBuilder.addStep("050MQPutMessage").execute().sleep(5000);
 
 		// read messages from queue after waiting and error
-		testBuilder.addStep("a006MQGetError").execute();
-		testBuilder.addStep("a006MQGETMessage").execute();
+		testBuilder.addStep("060MQGetError").execute();
+		testBuilder.addStep("060MQGETMessage").execute();
 
 		// do assertion with recorded values if mode is reply
-		testBuilder.addAssertion(new XMLFileAssertion("a002MQGETMessage").withNodeMatcher(ElementSelectors.byNameAndText)
+		testBuilder.addAssertion(new XMLFileAssertion("020MQGETMessage").withNodeMatcher(ElementSelectors.byNameAndText)
 		// .ignoreAttrs(ImmutableList.of("updateTimestamp",
 		// "insertTimestamp","processingTime"))
 				.ignore(ImmutableList.of("msgId")).checkForSimilar());
 
 		// do assertion with recorded values if mode is reply
-		testBuilder.addAssertion(new XMLFileAssertion("a004MQGETMessage").withNodeMatcher(ElementSelectors.byNameAndText)
+		testBuilder.addAssertion(new XMLFileAssertion("040MQGETMessage").withNodeMatcher(ElementSelectors.byNameAndText)
 		// .ignoreAttrs(ImmutableList.of("updateTimestamp",
 		// "insertTimestamp","processingTime"))
 		// .ignore(ImmutableList.of("updateTimestamp",
@@ -51,7 +51,7 @@ public class MQinMQOutTest extends AbstractTestWrapper {
 				.checkForSimilar());
 
 		// do assertion with recorded values if mode is reply
-		testBuilder.addAssertion(new XMLFileAssertion("a006MQGETMessage").withNodeMatcher(ElementSelectors.byNameAndText)
+		testBuilder.addAssertion(new XMLFileAssertion("060MQGETMessage").withNodeMatcher(ElementSelectors.byNameAndText)
 		// .ignoreAttrs(ImmutableList.of("updateTimestamp",
 		// "insertTimestamp","processingTime"))
 		// .ignore(ImmutableList.of("updateTimestamp",

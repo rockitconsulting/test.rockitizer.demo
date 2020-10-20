@@ -15,15 +15,15 @@ public class MQinDBOutTest extends AbstractTestWrapper {
 	public void testMQInMQOutFlow() throws Exception {
 
 		// write messages to inputQueue and wait
-		testBuilder.addStep("a001MQPutMessage").execute().sleep(3000);
+		testBuilder.addStep("010MQPutMessage").execute().sleep(3000);
 
 		// read messages from queue after waiting and error
-		testBuilder.addStep("a002DBGetMessage").execute();
+		testBuilder.addStep("020DBGetMessage").execute();
 		
-		testBuilder.addStep("a003MQGetError").execute();
+		testBuilder.addStep("030MQGetError").execute();
 
 		// do assertion with recorded values if mode is reply
-		testBuilder.addAssertion(new XMLFileAssertion("a002DBGetMessage").withNodeMatcher(ElementSelectors.byNameAndText)
+		testBuilder.addAssertion(new XMLFileAssertion("020DBGetMessage").withNodeMatcher(ElementSelectors.byNameAndText)
 		// .ignoreAttrs(ImmutableList.of("updateTimestamp",
 		// "insertTimestamp","processingTime"))
 		// .ignore(ImmutableList.of("updateTimestamp",

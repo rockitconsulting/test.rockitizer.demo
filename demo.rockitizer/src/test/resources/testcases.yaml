@@ -3,22 +3,51 @@
 #########################################################################################################################
 testCases:
 - testCaseName: FILEinFILEOutTest
+  testCaseDescription: "My testcase description. My testcase description.My testcase\
+    \ description.My testcase description.My testcase description.My testcase description.My\
+    \ testcase description.\r\nMy testcase description.My testcase description.My\
+    \ testcase description.My testcase description.My testcase description.My testcase\
+    \ description."
   testSteps:
-  - testStepName: 0BEFORE
+  - testStepName: 000BEFORE
+    testStepDescription: Preparation step. Before step execution. All file connectors
+      will be cleaned.
     connectorRefs:
     - conRefId: FILEDEL.IN.FILE2FILE
     - conRefId: FILEDEL.OUT.FILE2FILE
-  - testStepName: a001FILEPutMessage
+  - testStepName: 010FILEPutMessage
     connectorRefs:
     - conRefId: FILEPUT.IN.FILE2FILE
+      conRefDescription: Writing the testinput.xml file
       payloads:
       - fileName: testinput.xml
-  - testStepName: a002FILEGetMessage
+  - testStepName: 020FILEGetMessage
     connectorRefs:
     - conRefId: FILEGET.OUT.FILE2FILE
+  - testStepName: 999AFTER
+    testStepDescription: Preparation step. Before step execution. All file connectors
+      will be cleaned.
+    connectorRefs:
+    - conRefId: FILEDEL.IN.FILE2FILE
+    - conRefId: FILEDEL.OUT.FILE2FILE
 - testCaseName: FILEinMQOutTest
   testSteps:
-  - testStepName: 0BEFORE
+  - testStepName: 000BEFORE
+    connectorRefs:
+    - conRefId: MQGET.ERROR
+    - conRefId: MQGET.OUT.FILE2MQ
+  - testStepName: 010FILEPutMessage
+    connectorRefs:
+    - conRefId: FILEPUT.IN.FILE2MQ
+      payloads:
+      - fileName: testinput.xml
+  - testStepName: 020MQGetError
+    connectorRefs:
+    - conRefId: MQGET.ERROR
+  - testStepName: 020MQGetMessage
+    connectorRefs:
+    - conRefId: MQGET.OUT.FILE2MQ
+  - testStepName: 999AFTER
     connectorRefs:
     - conRefId: MQGET.ERROR
     - conRefId: MQGET.OUT.FILE2MQ
@@ -30,116 +59,140 @@ testCases:
   - testStepName: a002MQGetError
     connectorRefs:
     - conRefId: MQGET.ERROR
-  - testStepName: a002MQGetMessage
-    connectorRefs:
-    - conRefId: MQGET.OUT.FILE2MQ
 - testCaseName: JSONwithDatabaseTest
   testSteps:
-  - testStepName: 0BEFORE
+  - testStepName: 000BEFORE
     connectorRefs:
     - conRefId: DBPUT.CLEAN
       payloads:
       - fileName: cleanBookStore.sql
     - conRefId: MQGET.ERROR
-  - testStepName: a001JSONPutMessage
+  - testStepName: 010JSONPutMessage
     connectorRefs:
     - conRefId: HTTP.JADDBOOK
       payloads:
       - fileName: testinput.json
-  - testStepName: a002DBGETMessage
+  - testStepName: 020DBGETMessage
     connectorRefs:
     - conRefId: DBGET.GETBOOKS
+  - testStepName: 999AFTER
+    connectorRefs:
+    - conRefId: DBPUT.CLEAN
+      payloads:
+      - fileName: cleanBookStore.sql
+    - conRefId: MQGET.ERROR
 - testCaseName: MQinDBOutTest
   testSteps:
-  - testStepName: 0BEFORE
+  - testStepName: 000BEFORE
     connectorRefs:
     - conRefId: DBPUT.CLEAN
       payloads:
       - fileName: cleanBookStore.sql
     - conRefId: MQGET.ERROR
     - conRefId: MQGET.IN.MQ2DB
-  - testStepName: a001MQPutMessage
+  - testStepName: 010MQPutMessage
     connectorRefs:
     - conRefId: MQPUT.IN.MQ2DB
       payloads:
       - fileName: testinput.xml
-  - testStepName: a002DBGETMessage
+  - testStepName: 020DBGETMessage
     connectorRefs:
     - conRefId: DBGET.GETBOOKS
-  - testStepName: a003MQGetError
+  - testStepName: 030MQGetError
     connectorRefs:
     - conRefId: MQGET.ERROR
-- testCaseName: MQinFILEOutTest
-  testSteps:
-  - testStepName: 0BEFORE
-    connectorRefs:
-    - conRefId: FILEDEL.OUT.MQ2FILE
-    - conRefId: MQGET.ERROR
-    - conRefId: MQGET.IN.MQ2FILE
-  - testStepName: a001MQPutMessage
-    connectorRefs:
-    - conRefId: MQPUT.IN.MQ2FILE
-      payloads:
-      - fileName: testinput.xml
-  - testStepName: a002FILEGetMessage
-    connectorRefs:
-    - conRefId: FILEGET.OUT.MQ2FILE
-  - testStepName: a003MQGetError
-    connectorRefs:
-    - conRefId: MQGET.ERROR
-- testCaseName: MQinMQOutTest
-  testSteps:
-  - testStepName: 0BEFORE
-    connectorRefs:
-    - conRefId: MQGET.ERROR
-    - conRefId: MQGET.IN.MQ2MQ
-    - conRefId: MQGET.OUT.MQ2MQ
-  - testStepName: a001MQPutMessage
-    connectorRefs:
-    - conRefId: MQPUT.IN.MQ2MQ
-      payloads:
-      - fileName: testinput.xml
-  - testStepName: a002MQGetError
-    connectorRefs:
-    - conRefId: MQGET.ERROR
-  - testStepName: a002MQGetMessage
-    connectorRefs:
-    - conRefId: MQGET.OUT.MQ2MQ
-  - testStepName: a003MQPutMessage
-    connectorRefs:
-    - conRefId: MQPUT.IN.MQ2RFH2
-      payloads:
-      - fileName: MQPutPayloadWithMQMDHeader.xml
-  - testStepName: a004MQGetError
-    connectorRefs:
-    - conRefId: MQGET.ERROR
-  - testStepName: a004MQGetMessage
-    connectorRefs:
-    - conRefId: MQGET.OUT.MQ2RFH2
-  - testStepName: a005MQPutMessage
-    connectorRefs:
-    - conRefId: MQPUT.IN.MQ2RFH2
-      payloads:
-      - fileName: MQPutPayloadWithRFH2Header.xml
-  - testStepName: a006MQGetError
-    connectorRefs:
-    - conRefId: MQGET.ERROR
-  - testStepName: a006MQGetMessage
-    connectorRefs:
-    - conRefId: MQGET.OUT.MQ2RFH2
-- testCaseName: WSwithDatabaseTest
-  testSteps:
-  - testStepName: 0BEFORE
+  - testStepName: 999AFTER
     connectorRefs:
     - conRefId: DBPUT.CLEAN
       payloads:
       - fileName: cleanBookStore.sql
     - conRefId: MQGET.ERROR
-  - testStepName: a001WSPutMessage
+    - conRefId: MQGET.IN.MQ2DB
+- testCaseName: MQinFILEOutTest
+  testSteps:
+  - testStepName: 000BEFORE
+    connectorRefs:
+    - conRefId: MQGET.ERROR
+    - conRefId: MQGET.IN.MQ2FILE
+  - testStepName: 010MQPutMessage
+    connectorRefs:
+    - conRefId: MQPUT.IN.MQ2FILE
+      payloads:
+      - fileName: testinput.xml
+  - testStepName: 020FILEGetMessage
+    connectorRefs:
+    - conRefId: FILEGET.OUT.MQ2FILE
+  - testStepName: 030MQGetError
+    connectorRefs:
+    - conRefId: MQGET.ERROR
+  - testStepName: 999AFTER
+    connectorRefs:
+    - conRefId: MQGET.ERROR
+    - conRefId: MQGET.IN.MQ2FILE
+- testCaseName: MQinMQOutTest
+  testSteps:
+  - testStepName: 000BEFORE
+    connectorRefs:
+    - conRefId: MQGET.ERROR
+    - conRefId: MQGET.IN.MQ2MQ
+    - conRefId: MQGET.OUT.MQ2MQ
+  - testStepName: 010MQPutMessage
+    connectorRefs:
+    - conRefId: MQPUT.IN.MQ2MQ
+      payloads:
+      - fileName: testinput.xml
+  - testStepName: 020MQGetError
+    connectorRefs:
+    - conRefId: MQGET.ERROR
+  - testStepName: 020MQGetMessage
+    connectorRefs:
+    - conRefId: MQGET.OUT.MQ2MQ
+  - testStepName: 030MQPutMessage
+    connectorRefs:
+    - conRefId: MQPUT.IN.MQ2RFH2
+      payloads:
+      - fileName: MQPutPayloadWithMQMDHeader.xml
+  - testStepName: 040MQGetError
+    connectorRefs:
+    - conRefId: MQGET.ERROR
+  - testStepName: 040MQGetMessage
+    connectorRefs:
+    - conRefId: MQGET.OUT.MQ2RFH2
+  - testStepName: 050MQPutMessage
+    connectorRefs:
+    - conRefId: MQPUT.IN.MQ2RFH2
+      payloads:
+      - fileName: MQPutPayloadWithRFH2Header.xml
+  - testStepName: 060MQGetError
+    connectorRefs:
+    - conRefId: MQGET.ERROR
+  - testStepName: 060MQGetMessage
+    connectorRefs:
+    - conRefId: MQGET.OUT.MQ2RFH2
+  - testStepName: 999AFTER
+    connectorRefs:
+    - conRefId: MQGET.ERROR
+    - conRefId: MQGET.IN.MQ2MQ
+    - conRefId: MQGET.OUT.MQ2MQ
+- testCaseName: WSwithDatabaseTest
+  testSteps:
+  - testStepName: 000BEFORE
+    connectorRefs:
+    - conRefId: DBPUT.CLEAN
+      payloads:
+      - fileName: cleanBookStore.sql
+    - conRefId: MQGET.ERROR
+  - testStepName: 010WSPutMessage
     connectorRefs:
     - conRefId: HTTP.ADDBOOK
       payloads:
       - fileName: testinput.xml
-  - testStepName: a002DBGETMessage
+  - testStepName: 020DBGETMessage
     connectorRefs:
     - conRefId: DBGET.GETBOOKS
+  - testStepName: 999AFTER
+    connectorRefs:
+    - conRefId: DBPUT.CLEAN
+      payloads:
+      - fileName: cleanBookStore.sql
+    - conRefId: MQGET.ERROR

@@ -15,15 +15,15 @@ public class MQinFILEOutTest extends AbstractTestWrapper {
 	public void testMQInFileOutFlow() throws Exception {
 
 		// write messages to inputQueue and wait
-		testBuilder.addStep("a001MQPutMessage").execute().sleep(3000);
+		testBuilder.addStep("010MQPutMessage").execute().sleep(3000);
 
 		// read messages from directory after waiting and error
-		testBuilder.addStep("a002FILEGetMessage").execute();
+		testBuilder.addStep("020FILEGetMessage").execute();
 
-		testBuilder.addStep("a003MQGetError").execute();
+		testBuilder.addStep("030MQGetError").execute();
 
 		// do assertion with recorded values if mode is reply
-		testBuilder.addAssertion(new XMLFileAssertion("a002FILEGetMessage").withNodeMatcher(ElementSelectors.byNameAndText)
+		testBuilder.addAssertion(new XMLFileAssertion("020FILEGetMessage").withNodeMatcher(ElementSelectors.byNameAndText)
 				.ignoreAttrs(ImmutableList.of("uuid"))
 				// .ignore(ImmutableList.of("updateTimestamp",
 				// "insertTimestamp", "beginTimestamp", "endTimestamp",

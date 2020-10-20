@@ -60,11 +60,11 @@
 	</build>
 
 	<dependencies>
-		<dependency>
-			<groupId>io.github.rockitconsulting</groupId>
-			<artifactId>test.rockitizer</artifactId>
+ 		<dependency> 
+ 			<groupId>io.github.rockitconsulting</groupId>
+			<artifactId>test.rockitizer</artifactId> 
 			<version>1.0.5.4</version>
-		</dependency>
+ 		</dependency> 
 		<dependency>
 			<groupId>com.oracle.ojdbc</groupId>
 			<artifactId>ojdbc8_g</artifactId>

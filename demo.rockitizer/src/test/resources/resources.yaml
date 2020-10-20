@@ -59,16 +59,18 @@ httpConnectors:
   type: HTTP
   url: http://SCHARRDEV01:7800/BookService
   method: POST
-  contentType: application/xml
-  userAgent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0
   timeout: '500000'
+  headers:
+    Content-Type: application/xml
+    UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0
 - id: HTTP.JADDBOOK
   type: HTTP
   url: http://SCHARRDEV01:7080/JSONBookService
   method: POST
-  contentType: application/json
-  userAgent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0
   timeout: '500000'
+  headers:
+    Content-Type: application/json
+    UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0
 fileConnectors:
 - id: FILEDEL.IN.FILE2FILE
   type: FILEDEL

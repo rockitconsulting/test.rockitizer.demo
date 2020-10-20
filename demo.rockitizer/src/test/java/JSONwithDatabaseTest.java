@@ -19,17 +19,17 @@ public class JSONwithDatabaseTest extends AbstractTestWrapper {
 		// ,testBuilder.addStep("a001MQPutMessage").execute().sleep(3000);
 
 		// read messages from queue after waiting and error
-		testBuilder.addStep("a001JSONPutMessage").execute();
-		testBuilder.addStep("a002DBGETMessage").execute();
+		testBuilder.addStep("010JSONPutMessage").execute();
+		testBuilder.addStep("020DBGETMessage").execute();
 
 		// do assertion with recorded values if mode is reply
-		testBuilder.addAssertion(new XMLFileAssertion("a001JSONPutMessage")
+		testBuilder.addAssertion(new XMLFileAssertion("010JSONPutMessage")
 				.withNodeMatcher(ElementSelectors.byNameAndText)
 				.ignore(ImmutableList.of("CF-RAY", "ETag", "Access-Control-Allow-Origin", "Connection", "Set-Cookie", "Date", "Expect-CT", "X-Powered-By",
 						"createdAt", "id", "ID")).checkForSimilar());
 
 		// do assertion with recorded values if mode is reply
-		testBuilder.addAssertion(new XMLFileAssertion("a002DBGETMessage").withNodeMatcher(ElementSelectors.byNameAndText)
+		testBuilder.addAssertion(new XMLFileAssertion("020DBGETMessage").withNodeMatcher(ElementSelectors.byNameAndText)
 		// .ignoreAttrs(ImmutableList.of("updateTimestamp",
 		// "insertTimestamp","processingTime"))
 		// .ignore(ImmutableList.of("updateTimestamp",
