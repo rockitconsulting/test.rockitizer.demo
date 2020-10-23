@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.xmlunit.diff.ElementSelectors;
 
 import com.google.common.collect.ImmutableList;
+import com.rockit.common.blackboxtester.assertions.JSONFileAssertion;
 import com.rockit.common.blackboxtester.assertions.XMLFileAssertion;
 import com.rockit.common.blackboxtester.suite.structures.TestBuilder;
 import com.rockit.common.blackboxtester.wrapper.AbstractTestWrapper;
@@ -23,7 +24,7 @@ public class JSONwithDatabaseTest extends AbstractTestWrapper {
 		testBuilder.addStep("020DBGETMessage").execute();
 
 		// do assertion with recorded values if mode is reply
-		testBuilder.addAssertion(new XMLFileAssertion("010JSONPutMessage")
+		testBuilder.addAssertion(new JSONFileAssertion("010JSONPutMessage")
 				.withNodeMatcher(ElementSelectors.byNameAndText)
 				.ignore(ImmutableList.of("CF-RAY", "ETag", "Access-Control-Allow-Origin", "Connection", "Set-Cookie", "Date", "Expect-CT", "X-Powered-By",
 						"createdAt", "id", "ID")).checkForSimilar());
