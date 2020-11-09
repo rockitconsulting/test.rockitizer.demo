@@ -99,13 +99,13 @@ mqDataSources:
   qmgr: QM1
   channel: SYSTEM.BKR.CONFIG
   host: localhost
-  port: '1414'
+  port: ${mqDataSources.defaultMQ.port}
   user: admin
   password: admin
 dbDataSources:
 - id: defaultDB
   type: DB
-  url: jdbc:db2://localhost:50000/ROCKIT
+  url: ${dbDataSources.defaultDB.url}
   user: admin
   password: admin
 payloadReplacer:

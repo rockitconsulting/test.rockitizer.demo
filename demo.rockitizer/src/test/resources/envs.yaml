@@ -1,0 +1,5 @@
+envs:
+- name: devp
+  props:
+    dbDataSources.defaultDB.url: jdbc:db2://localhost:50000/ROCKIT
+    mqDataSources.defaultMQ.port: 1414
