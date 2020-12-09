@@ -90,9 +90,6 @@ fileConnectors:
 - id: FILEGET.OUT.MQ2FILE
   type: FILEGET
   path: C:/temp/MQ2FILE_OUT
-- id: FILEDEL.OUT.MQ2FILE
-  type: FILEDEL
-  path: C:/temp/MQ2FILE_OUT
 mqDataSources:
 - id: defaultMQ
   type: MQ

@@ -51,14 +51,6 @@ testCases:
     connectorRefs:
     - conRefId: MQGET.ERROR
     - conRefId: MQGET.OUT.FILE2MQ
-  - testStepName: a001FILEPutMessage
-    connectorRefs:
-    - conRefId: FILEPUT.IN.FILE2MQ
-      payloads:
-      - fileName: testinput.xml
-  - testStepName: a002MQGetError
-    connectorRefs:
-    - conRefId: MQGET.ERROR
 - testCaseName: JSONwithDatabaseTest
   testSteps:
   - testStepName: 000BEFORE
